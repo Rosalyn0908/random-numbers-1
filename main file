@@ -1,0 +1,19 @@
+//Randomizes a number (range 1000..9999) and calculate the sum of its digits if the sum is one digit only. For instance, if the randomized number was 1041, program should print 6
+
+
+<script>
+
+
+function foop () {
+    var number = Math.floor((Math.random() * 9999) + 1000);
+    var result = number.toString().split("");
+    var last = eval(result.join('+'));
+    if (last <10) {
+        return last;
+    }
+    else {console.log("this number is more than one digit")}
+}
+
+console.log(foop());
+
+</script>
